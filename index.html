@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="assest/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="sidebar bg-dark">
+      <ul>
+        <li>
+          <a class="hover-underline-animation" href="">Home</a>
+        </li>
+        <li><a class="hover-underline-animation" href="#About">About</a></li>
+        <li>
+          <a class="hover-underline-animation" href="#Portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a class="hover-underline-animation" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <button class="btn" id="sidebarToggle">III</button>
+    </div>
+    <div class="home" id="home">
+      <div class="text1">
+        <span id="element"></span>
+        <h3>i'm a web developer</h3>
+        <p>
+          i'm a web designer with extensive experience for over 4 years
+          expertise is to create and front end website
+        </p>
+        <button class="btnabt">
+          <a href="#About">More About Me</a>
+        </button>
+      </div>
+      <div class="img">
+        <img src="./img/13.png" class="float-end border" alt="..." />
+      </div>
+    </div>
+    <div id="About">
+      <h1>About</h1>
+      <p>
+        Hello! I'm Stoph, a front end developer, a guy slighty obsessed for code
+        quality. I’m currently available for freelance work. If you have a
+        project that you want to get started or think you need my help with
+        something, then get in touch.
+      </p>
+      <button class="btnabt"><a href="#contact">Hire me</a></button>
+    </div>
+    <div id="Portfolio">
+      <div class="container">
+        <h2>MY RECENT WORKS</h2>
+        <div class="row">
+          <div class="col-md-6 col-sm-8">
+            <div class="box">
+              <img src="./img/prjct1.jpg" />
+              <div class="box-content">
+                <h3 class="title">First project</h3>
+                <span class="post">with html css</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-8">
+            <div class="box">
+              <img id="box2" src="./img/prjct2.jpg" />
+              <div class="box-content">
+                <h3 class="title">Second project</h3>
+                <span class="post">with html css and bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="contact">
+      <div class="sectionheader">
+        <h1>CONTACT</h1>
+      </div>
+      <article>
+        <p>
+          If you have a project that you want to get started or think you need
+          my help with something, then get in touch.
+        </p>
+
+        <label for="checkcontact" class="contactbutton"
+          ><div class="mail"></div>
+        </label>
+        <input id="checkcontact" type="checkbox"/>
+        <form action="" method="post" class="contactform">
+          <p class="input_wrapper">
+            <input
+              type="text"
+              name="contact_nom"
+              value=""
+              id="contact_nom"
+            /><label for="contact_nom">NAME</label>
+          </p>
+          <p class="input_wrapper">
+            <input
+              type="text"
+              name="contact_email"
+              value=""
+              id="contact_email"
+            /><label for="contact_email">EMAIL</label>
+          </p>
+          <p class="textarea_wrapper">
+            <textarea name="contact_message" id="contact_message"></textarea>
+          </p>
+          <p class="submit_wrapper"><input type="submit" value="Sent"/></p>
+        </form>
+      </article>
+    </section>
+    <div class="footer-dark">
+    <div class="col-item-social">
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/mouuustaphaaa/"><i class="fa fa-instagram"></i></a>
+      <a href="https://mail.google.com/mail"><i class="fa fa-google"></i></a>
+    </div>
+  </div>
+    <script>
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const sidebar = document.querySelector(".sidebar");
+      const content = document.querySelector(".content");
+
+      sidebarToggle.addEventListener("click", () => {
+        if (sidebar.classList.contains("active")) {
+          sidebarToggle.textContent = "III";
+        } else {
+          sidebarToggle.textContent = "X";
+        }
+        sidebar.classList.toggle("active");
+        content.classList.toggle("active");
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["<h2>Hello,my name is stoph lk7li</h2>"],
+        typeSpeed: 50,
+        loop: true,
+        showCursor: false,
+      });
+    </script>
+  </body>
+</html>
